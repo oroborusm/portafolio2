@@ -1,0 +1,25 @@
+<main>
+  <section class="internoPost">
+	<p id="notice"><%= notice %></p>
+
+	<h2><%= @post.titulo %></h2>
+
+	<figure class="postGal">
+		<div class="botones">
+			<%= link_to '', edit_post_path(@post), :class=>"edit" %>
+			<%= link_to '', posts_path, :class=>"back" %>
+		</div>
+		
+		
+		<img src="<%= @post.imgen%>" alt="">
+
+		<figcaption>
+			<%= @post.descripcion %>
+		</figcaption>
+	</figure>	
+	  
+
+	
+
+  </section>
+</main>

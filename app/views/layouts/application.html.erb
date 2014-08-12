@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+  <title>Panopticon</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <%= stylesheet_link_tag 'normalize', 'estilo', media: 'all', 'data-turbolinks-track' => true %>
+
+  
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<header>
+      <div class="contenedor">
+        <div class="logo">
+          <figure>
+            <a class="blog-logo" href="/">
+                <img src="/assets/logo.png" alt="">
+            </a>
+          </figure>
+        </div>
+        
+      </div>
+      <div class="oscuro">
+          <nav>
+              <ul>
+                  <li><a href="#">Sobre mi</a></li>
+                  <li><a href="#">Contacto</a></li>
+                  <% if current_user %>
+                    <li>
+                      <%= link_to 'Salir', destroy_user_session_path, method: :delete %>
+                    </li>
+                    <li>
+                      <%= link_to 'Nuevo', new_post_path %>
+                    </li>
+                  <%else%>
+                    <li>
+                      <%= link_to 'Ingresa', new_user_session_path %>
+                    </li>
+                  <%end%>
+              </ul>
+          </nav>
+      </div>
+    </header>
+
+  <%= yield %>
+
+
+  <%= javascript_include_tag 'application','carrusel', 'script', 'data-turbolinks-track' => true %>
+
+  <footer>
+  	<a href="#">un texto sabroson</a>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+  </footer>
+</body>
+</html>

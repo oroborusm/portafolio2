@@ -1,0 +1,118 @@
+
+    <div class="fijo">
+	    <div class="bio">
+	      <ul class="slide">
+	        <li>
+	          <figure>
+	            <img src="/assets/diseno.png" alt="">
+	            <figcaption>
+	              <p>Diseñador Gráfico de pasión y profesión de día…</p>
+	            </figcaption>
+	          </figure>
+	          
+	        </li>
+
+	        <li>
+	          <figure>
+	            <img src="/assets/codigo.png" alt="">
+	            <figcaption>
+	              <p>Front-end developer, por las noches …</p>
+	            </figcaption>
+	          </figure>
+	        </li>
+	      </ul>
+	    </div>
+
+	    <div class="fijoImg"></div>
+	</div>
+	
+	<main>
+		
+		<section>
+	        <article class="tools">
+	          <ul>
+	              <li >
+	                  <figure>
+	                      <img src="assets/ai.png" alt="">
+	                      <figcaption></figcaption>
+	                  </figure>
+	              </li>
+	              <li >
+	                  <figure>
+	                      <img src="assets/ps.png" alt="">
+	                      <figcaption></figcaption>
+	                  </figure>
+	              </li>
+	              <li >
+	                  <figure>
+	                      <img src="assets/id.png" alt="">
+	                      <figcaption></figcaption>
+	                  </figure>
+	              </li>
+	          </ul>
+
+	          <ul>
+	            <li>
+	                <figure>
+	                    <img src="assets/html5.png" alt="">
+	                    <figcaption></figcaption>
+	                </figure>
+	            </li>
+	            <li>
+	                <figure>
+	                    <img src="assets/rails.png" alt="">
+	                    <figcaption></figcaption>
+	                </figure>
+	            </li>
+	            <li>
+	                <figure>
+	                    <img src="assets/css3.png" alt="">
+	                    <figcaption></figcaption>
+	                </figure>
+	            </li>
+	            <li>
+	                <figure>
+	                    <img src="assets/js.png" alt="">
+	                    <figcaption></figcaption>
+	                </figure>
+	            </li>
+	            <li>
+	                <figure>
+	                    <img src="assets/st.png" alt="">
+	                    <figcaption></figcaption>
+	                </figure>
+	            </li>
+	            <li>
+	                <figure>
+	                    <img src="assets/styl.png" alt="">
+	                    <figcaption></figcaption>
+	                </figure>
+	            </li>
+	          </ul>
+	        </article>
+	        
+	    </section>
+
+
+
+		<section class="galeria">
+	        <div class="contPost">
+	            <ul class="post-iterado">
+					<% @posts.each do |post| %>
+						<li data-id="<%= post.id %>">
+							<figure>
+								<img src="<%= post.imgen %>" alt="">
+							</figure>
+							<%= link_to "#{post.titulo}", post %>
+							
+						</li>
+					<% end %>
+	            </ul>            
+	        </div>
+	    </section>
+
+	</main>
+	
+
+	
+    

@@ -1,0 +1,32 @@
+<main>
+  <section class="internoPost">
+    <h1>Mis trabajos</h1>
+    <ul>
+      <% @posts.each do |post| %>
+
+      <li data-id="<%= post.id %>">
+        <h2><%= post.titulo %></h2>
+        <figure>
+          <img src="<%= post.imgen %>" alt="">
+        </figure>
+
+        <div class="links">
+          <%= link_to "#{post.titulo}", post, :class=>"titulo" %>
+          <%= link_to 'X', post, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"cerrar" %>
+        </div>
+        
+      </li>
+
+        
+      <% end %>
+    </ul>
+
+    <% if current_user %>
+      <%= link_to 'New Post', new_post_path %>
+    <% end %>
+
+  </section>
+</main>
+
+
+
